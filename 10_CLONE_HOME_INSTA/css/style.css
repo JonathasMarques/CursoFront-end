@@ -1,0 +1,28 @@
+/* GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+/* CONTAINER */
+
+#main-container {
+    display: flex;
+    margin-top: 30px;
+}
+
+#banner-container,
+.form-container {
+    flex: 1 1 0;
+    width: 50%;
+}
+
+#banner-container {
+    text-align: right;
+}
