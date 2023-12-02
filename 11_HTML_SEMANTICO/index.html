@@ -6,41 +6,98 @@
     <title>HTML Semântico</title>
 </head>
 <body>
-    <!-- 1 - section -->
-    <section>
-        <h2>Veja os nossos produtos:</h2>
-        <p>Produto 1</p>
-        <p>Produto 2</p>
-        <p>Produto 3</p>
-    </section>
-    <section>
-        <h2>Conheça os nossos diferenciais:</h2>
+    <!-- 3 - header -->
+
+    <header>
+        <h2>Nosso site</h2>
+        <!--
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        -->
+    </header>
+
+     <!-- 5 - nav -->
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+    </nav>
+
+     <!-- 8 - main -->
+
+    <main>
+        <!-- 1 - section -->
+        <section>
+            <h2>Veja os nossos produtos:</h2>
+            <p>Produto 1</p>
+            <p>Produto 2</p>
+            <p>Produto 3</p>
+        </section>
+        <section>
+            <h2>Conheça os nossos diferenciais:</h2>
+            <ul>
+              <li>Diferencial 1</li>
+              <li>Diferencial 2</li>
+              <li>Diferencial 3</li>
+            </ul>
+        </section>
+        <!-- 2 - article -->
+        <section>
+            <h2>Últimos posts do blog:</h2>
+            <article>
+                <h3>Post sobre alguma coisa</h3>
+                <p>Descrição do post</p>
+                <a href="#">Ler conteúdo</a>
+            </article>
+            <article>
+                <h3>post 2</h3>
+                <p>Descrição do post 2</p>
+                <a href="#">Ler conteúdo</a>
+            </article>
+            <article>
+                <h3>post 3</h3>
+                <p>Descrição do post 3</p>
+                <a href="#">Ler conteúdo</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- 6 - aside -->
+
+    <aside>
+        <h4>Categorias:</h4>
         <ul>
-          <li>Diferencial 1</li>
-          <li>Diferencial 2</li>
-          <li>Diferencial 3</li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">React</a></li>
+            <li><a href="#">Node</a></li>
         </ul>
-    </section>
+    </aside>
 
-    <!-- 2 - article -->
+    <!-- 9 - mark -->
+        <p>
+        Temos neste text um <mark>conteúdo importante</mark>, que precisa estar
+        marcado.
+        </p>
 
-    <section>
-        <h2>Últimos posts do blog:</h2>
-        <article>
-            <h3>Post sobre alguma coisa</h3>
-            <p>Descrição do post</p>
-            <a href="#">Ler conteúdo</a>
-        </article>
-        <article>
-            <h3>post 2</h3>
-            <p>Descrição do post 2</p>
-            <a href="#">Ler conteúdo</a>
-        </article>
-        <article>
-            <h3>post 3</h3>
-            <p>Descrição do post 3</p>
-            <a href="#">Ler conteúdo</a>
-        </article>
-    </section>
+    <!-- 7 - figure e figcaption -->
+        <figure>
+            <img src="img/lambo.jpg" alt="Lamborghini" />
+            <figcaption>Uma Lamborghini amarela</figcaption>
+        </figure>
+
+    <!-- 4 - footer -->
+
+    <footer>
+        <div>
+            <h2>Entre em contato:</h2>
+            <p>Telefone: (xx) xxxxx-xxxx</p>
+            <p>Email: abcde@gmail.com</p>
+        </div>
+        <p>Criado por Jonathas Marques - 2023</p>
+    </footer>
 </body>
 </html>
