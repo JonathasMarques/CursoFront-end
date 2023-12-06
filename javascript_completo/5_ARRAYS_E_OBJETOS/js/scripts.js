@@ -304,3 +304,117 @@ const frase = "O rato roeu a roupa do rei de Roma"
 const arrayDaFrase = frase.split(" ")
 
 console.log(arrayDaFrase)
+
+// 21 - join
+
+const fraseDeNovo = arrayDaFrase.join(" ")
+
+console.log(fraseDeNovo)
+
+const itensParaComprar = ["Mouse", "Teclado", "Monitor"]
+
+const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}`
+
+console.log(fraseDeCompra);
+
+// 22 - repeat
+
+const palavra = "Testando\n";
+
+console.log(palavra.repeat(5))
+
+// 23 - rest operator
+
+const somaInfinita = (...args) => {
+
+    let total = 0
+
+    for(let i = 0; i < args.length; i++) {
+        total += args[i]
+    }
+
+    return total;
+};
+
+console.log(somaInfinita(1, 2, 3))
+
+console.log(somaInfinita(1, 33, 34646, -94383, 23, 900000));
+
+// 24 - for of
+
+const somaInfinita2 = (...args) => {
+
+    let total = 0
+
+    for(num of args) {
+        total += num
+    }
+
+    return total;
+}
+
+console.log(somaInfinita2(7, 4, 8, -3));
+
+// 25 - destructuring em objetos
+
+const userDetails = {
+
+    firstName: "Jhon",
+    lastName: "Marques",
+    job: "Programador"
+}
+
+const {firstName, lastName, job} = userDetails
+
+console.log(firstName, lastName, job);
+
+// renomear variaveis 
+
+const {firstName: primeiroNome} = userDetails
+
+console.log(primeiroNome);
+
+// 26 - destructuring com arrays 
+
+const myList = ["Avião", "Submarino", "Carro"]
+
+const [veiculoA, veiculoB, veiculoC] = myList;
+
+console.log(veiculoA, veiculoB, veiculoC);
+
+// 27 - JSON
+
+const myJson = 
+    '{"name": "Jhon", "age": 16, "skills": ["PHP", "javaScript", "Python"]}';
+
+console.log(myJson)
+
+console.log(typeof myJson)
+
+// 28 - JSON para objeto e objeto para JSON
+
+const myObject = JSON.parse(myJson);
+
+console.log(myJson);
+
+console.log(myObject);
+
+console.log(myObject.name);
+
+console.log(typeof myObject);
+
+ // json invalido 
+
+ const badJson = '{"name": Matheus, "age": 31}'
+
+ // const myBadObject = JSON.parse(badJson);
+
+myObject.isOpenToWork = true
+
+console.log(myObject);
+
+const myNewjson = JSON.stringify(myObject)
+
+console.log(myNewjson)
+
+console.log(typeof myNewjson)
