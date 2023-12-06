@@ -48,3 +48,87 @@ const arr = [];
 console.log(arr.length);
 
 console.log(Object.getPrototypeOf(arr));
+
+// 4 - mais sobre prototype
+
+const myObject = {
+    a: "b",
+};
+
+console.log(Object.getPrototypeOf(myObject));
+
+console.log(Object.getPrototypeOf(myObject) === Object.prototype);
+
+const mySecondObject = Object.create(myObject)
+
+console.log(mySecondObject);
+
+console.log(mySecondObject.a)
+
+console.log(Object.getPrototypeOf(mySecondObject) === myObject);
+
+
+// 5 - classes basicas
+
+const cachorro = {
+    raca: null,
+    patas: 4
+};
+
+const pastorAlemao = Object.create(cachorro);
+
+pastorAlemao.raca = "Pastor Alemão";
+
+console.log(pastorAlemao);
+
+
+console.log(pastorAlemao.patas);
+
+const bulldog = Object.create(cachorro)
+
+bulldog.raca = "Bulldog";
+
+console.log(bulldog)
+
+// 6 - função como classe - função construtoras
+
+function criarCachorro(nome, raca) {
+
+    const cachorro = Object.create({})
+
+    cachorro.nome = nome
+    cachorro.raca = raca
+
+    return cachorro
+};
+
+const bob = criarCachorro("Bob", "Vira lata");
+
+console.log(bob)
+
+const jack = criarCachorro("Jack", "Poodle");
+
+console.log(jack)
+
+console.log(Object.getPrototypeOf(jack));
+
+// 7 - função como classe 
+
+function Cachorro(nome, raca) {
+    this.nome = nome
+    this.raca = raca
+}
+
+const husky = new Cachorro("Ozzy", "Husky");
+
+console.log(husky)
+
+// 8 - metodos na funcao construtora 
+
+Cachorro.prototype.uivar = function () {
+    console.log("Auuuu!");
+};
+
+console.log(Cachorro.prototype())
+
+husky.uivar();
