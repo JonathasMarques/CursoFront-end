@@ -93,3 +93,15 @@ console.log(footer.offsetHeight);
 console.log(footer.clientWidth);
 
 console.log(footer.clientHeight);
+
+// CSS com JS
+
+mainContainer.style.color = "red";
+mainContainer.style.backgroundColor = "#333";
+mainContainer.style.paddingBottom = "15px"
+
+// 14 - alterando estilos de varios elementos
+
+for(const li of listItens) {
+    li.style.background = "red";
+}
