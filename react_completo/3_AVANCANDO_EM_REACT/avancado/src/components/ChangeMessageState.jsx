@@ -1,6 +1,6 @@
 import React from "react";
 
-const ChangeMessage = ({handleMessage}) => {
+const ChangeMessageState = ({handleMessage}) => {
     const messages = ["Oi", "Olá", "Tudo bem?"]
 
     return (
@@ -12,4 +12,4 @@ const ChangeMessage = ({handleMessage}) => {
     )
 }
 
-export default ChangeMessage
+export default ChangeMessageState
