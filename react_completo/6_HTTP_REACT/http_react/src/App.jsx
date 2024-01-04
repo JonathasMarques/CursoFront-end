@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 import { useFetch } from './hooks/useFetch';
 
-const url = "http://localhost:3000/products"
+const url = ""
 
 import './App.css'
 
@@ -11,7 +11,7 @@ function App() {
 
   // 4 - custom hook
 
-  const {data: items} = useFetch(url)
+  const {data: items, httpConfig, loading, error } = useFetch(url)
 
 //  useEffect(() => {
 //    
@@ -36,21 +36,25 @@ function App() {
 
     const product = {
       name, 
-      price
-    }
+      price,
+    };
 
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(product),
-    });
+    // 5 - refatorando post
+    httpConfig(product, "POST")
 
-    // 3 - carregamento dinamico 
-    const addedProduct = await res.json()
 
-    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+//    const res = await fetch(url, {
+//      method: "POST",
+//      headers: {
+//        "Content-Type": "application/json"
+//      },
+//      body: JSON.stringify(product),
+//    });
+//
+//    // 3 - carregamento dinamico 
+//    const addedProduct = await res.json()
+//
+//    setProducts((prevProducts) => [...prevProducts, addedProduct]);
 
   }
 
@@ -58,6 +62,10 @@ function App() {
     <>
       <div>
         <h1>HTTP em React</h1>
+        {/* 6 - loading */}
+        {loading && <p>Carregando...</p>}
+        {/* 7 - tratando erro */}
+        {error && <p>{error}</p>}
         {/* 1 - resgate de dados */}
         <ul>
           {items && items.map((products) => (
@@ -85,7 +93,10 @@ function App() {
                   onChange={(e) => setPrice(e.target.value)} 
                 />
               </label>
-              <input type="submit" value="Enviar"/>
+              {/* <input type="submit" value="Enviar"/> */}
+              {/* 7 - loading post */}
+              {loading && <input type="submit" disabled value="Aguarde"></input>}
+              {!loading && <input type="submit" value="Criar"></input>}
             </form>
         </div>
       </div>
