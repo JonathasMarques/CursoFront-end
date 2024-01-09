@@ -1,22 +1,24 @@
-import './App.css'
+import "./App.css";
 
-import { Outlet } from 'react-router-dom'
+import { Outlet } from "react-router-dom";
 
-// 5 - link entre paginas
-import Navbar from './components/Navbar'
+// 6 - link entre páginas
+import Navbar from "./components/Navbar";
+
+// 14 - search params
+import SearchForm from "./components/SearchForm";
 
 function App() {
-
-
   return (
-    <>
-      <div>
-        <Navbar/>
-        <Outlet/>
-        <p>Footer</p>
-      </div>
-    </>
-  )
+    <div className="App">
+      {/* 6 - link entre páginas */}
+      <Navbar />
+      {/* 14 - search params */}
+      <SearchForm />
+      <h1>React Router</h1>
+      <Outlet />
+    </div>
+  );
 }
 
-export default App
+export default App;
