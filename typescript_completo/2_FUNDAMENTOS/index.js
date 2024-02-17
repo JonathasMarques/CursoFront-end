@@ -1,23 +1,30 @@
+"use strict";
 // 1 - numbers
-var x = 10;
+let x = 10;
 console.log(x);
 x = 16;
 console.log(typeof x);
-var y = 15.345435;
+const y = 15.345435;
 console.log(typeof y);
 console.log(y);
 console.log(y.toPrecision(3));
 // 2 - string
-var firstName = "Matheus";
+const firstName = "Matheus";
 console.log(firstName.toUpperCase());
-var fullName;
-var lastName = "battisti";
+let fullName;
+const lastName = "battisti";
 fullName = firstName + " " + lastName;
 console.log(fullName);
 console.log(typeof fullName);
 // 3 - boolean
-var a = false;
+let a = false;
 console.log(a);
 console.log(typeof a);
 a = true;
 console.log(a);
+// 4 - inference e annotation
+let ann = "Teste";
+let inf = "Teste";
+//ann = 1
+// inf = 1
+console.log("testando 2");
